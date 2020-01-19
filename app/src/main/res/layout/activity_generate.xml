@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.ogulcan.qrpirydate.GenerateActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:text="Name"
+                android:layout_marginLeft="5dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/etqr"
+                android:background="@drawable/edit_text_style"
+                android:padding="2dp"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:text="Production Date"
+                android:layout_marginLeft="5dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/production_date_text"
+                android:background="@drawable/edit_text_style"
+                android:padding="2dp"
+                android:hint="01/01/2019"
+                android:layout_margin="5dp"
+                android:editable="false"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:text="Expiry Date"
+                android:layout_marginLeft="5dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/expiry_date_text"
+                android:background="@drawable/edit_text_style"
+                android:padding="2dp"
+                android:hint="01/01/2020"
+                android:layout_margin="5dp"
+                android:editable="false"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:id="@+id/load_image"
+                android:layout_margin="5dp"
+                android:drawableStart="@android:drawable/ic_menu_camera"
+                android:text="Upload Image"
+                android:drawableLeft="@android:drawable/ic_menu_camera" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:id="@+id/blueon_btn"
+                android:drawableStart="@android:drawable/stat_sys_data_bluetooth"
+                android:layout_margin="5dp"
+                android:text="MATCH DEVICE"
+                android:drawableLeft="@android:drawable/stat_sys_data_bluetooth" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn"
+                android:background="@color/colorAccent"
+                android:textColor="@color/white"
+                android:text="Create"
+                android:layout_margin="5dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:id="@+id/iv"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Save"
+                android:drawableStart="@android:drawable/ic_menu_save"
+                android:background="@color/colorAccent"
+                android:textColor="@color/white"
+                android:id="@+id/save_btn"
+                android:visibility="gone"
+                android:drawableLeft="@android:drawable/ic_menu_save" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:drawableStart="@android:drawable/ic_menu_set_as"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimary"
+                android:text="Set up device"
+                android:id="@+id/bluetooth_btn"
+                android:visibility="gone"
+                android:drawableLeft="@android:drawable/ic_menu_set_as" />
+
+        </LinearLayout>
+
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center" >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+    </RelativeLayout>
+</RelativeLayout>
